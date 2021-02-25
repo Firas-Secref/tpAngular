@@ -2,4 +2,15 @@
 
 <router-outlet></router-outlet>
 
+<span>{{title}}</span>
+<div>
+  <img [src] = 'url' alt="">
+</div>
+<button (click)="onSave($event)" ></button>
+
+<br>
+
+<input type="text" [(ngModel)]="title">
+<p>{{title}}</p>
+
 <app-footer></app-footer>
