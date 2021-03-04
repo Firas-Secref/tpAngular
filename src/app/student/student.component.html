@@ -1,0 +1,29 @@
+<div>
+  <table class="table">
+    <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">FullName</th>
+      <th scope="col">Email</th>
+      <th scope="col">Country</th>
+
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr *ngFor="let student of students ; index as i">
+
+      <th scope="row">{{i+1}}</th>
+      <td [ngStyle]="{'color': student.country === 'USA' ? 'red' : 'green'}">{{student.name}}</td>
+      <td [ngStyle]="{'color': student.country === 'USA' ? 'red' : 'green'}">{{student.email}}</td>
+      <td [ngStyle]="{'color': student.country === 'USA' ? 'red' : 'green'}">{{student.country}}</td>
+      <td>
+        <button [ngStyle]="{'color': student.country === 'UK' ? 'red' : 'green'}"  type="button" class="btn btn-outline-success">Edit</button>
+        <button [ngStyle]="{'color': student.country === 'UK' ? 'red' : 'green'}" type="button" class="btn btn-outline-danger" style="margin: 2%">Delete</button>
+
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>
